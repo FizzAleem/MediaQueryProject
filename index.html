@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>     
+                <h2>START BOOTSTRAP</h2> 
+                <ul>
+                    <li> <a href="#">Portfolio</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Contact</a></li>
+                </ul>
+                
+                <div class="dropdown">
+                    <button onclick="showMenu()" class="dropbtn">MENU<i class="fa fa-bars"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#">Home</a>
+                      <a href="#">About</a>
+                      <a href="#">Contact</a>
+                    </div>
+                </div>        
+                
+  
+            </nav>
+        </div> 
+    </header>
+    <!--Showcase-->
+    <section class="showcase">
+         <div class="showcase-content">
+            <div class="circle"><img src="images/business-man.png"></div>
+            <h1>START BOOTSTRAP</h1>
+            <div class="star"><hr><img src="images/wstar.png"><hr></div>
+            <p>Web Developer-Graphic Artist-User Experience Designer</p>
+         </div>
+    </section>
+    <!--PortFolio-->
+    <section class="portfolio">
+        <div class="showcase-content">
+        <h1 >PORTFOLIO</h1>
+        <div class="star"><hr><img src="images/black-star.png"><hr></div>
+        <div class="row-1">
+            <div id="img1" ><img  src="images/cake1.png"></div>
+            <div id="img2" ><img class="circular--square" src="images/home.png"></div>
+            <div id="img3" ><img class="circular--square" src="images/safe.png"></div>
+        </div>
+        <div class="row-1">
+            <div id="img4" ><img class="circular--square" src="images/submarine.jpeg"></div>
+            <div id="img5" ><img class="circular--square" src="images/circus.jpeg"></div>
+            <div id="img6" ><img class="circular--square" src="images/controller.jpeg"></div>
+        </div>
+       
+    </div>
+       
+   </section>
+    <!--About-->
+    <section class="About-case">
+        <div class="showcase-content">
+            <h1 >ABOUT</h1>
+            <div class="star"><hr><img src="images/wstar.png"><hr></div>
+            <div class="about-content">
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the 
+                    visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used 
+                    as a placeholder before final copy is available.</p>
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual 
+                    form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder
+                     before final copy is available.</p>
+            </div>
+            <br />
+            <div class="btn"><i class="fa fa-download"></i>Download Now!</div>
+            <div class="Hide-btn"><i class="fa fa-download"></i>Free Download!</div>
+        </div>    
+    </section>
+    <section class="formSection">
+        <div class="showcase-content">
+        <h1 >CONTACT ME</h1>
+        <div class="star"><hr><img src="images/black-star.png"><hr></div>
+     
+            <form action="/">
+                <label for="name">Name:</label><br/><br/>
+                <input type="text" id="name" name="name">
+                <br/>
+                <br/>
+                <label for="email">Email Address:</label><br/><br/>
+                <input type="text" id="email" name="email">
+                <br/>
+                <br/>
+                <label for="phone">Phone:</label><br/><br/>
+                <input type="text" id="phone" name="phone">
+                </br>
+                <br/>
+                <label for="Message">Message:</label><br/><br/><br/>
+                <textarea  id="msg" name="msg" rows="3" > </textarea>
+                <input type="submit" id="send-btn" value="Send" name="send-btn">
+            </form>
+    
+        </div>     
+       
+    </section>
+    <footer>
+          <div class="foot-area">
+              <div>
+                   <h2>LOCATION</h2>
+                   <p>2215 John Daniel Drive<br/>
+                       Clark, MO 65243
+                   </p>
+              </div>
+              <div>
+                  <h2>AROUND THE WEB</h2>
+                  <div class="circle-1"><i class="fa fa-facebook" aria-hidden="true"></i>
+                  </div>
+                  <div class="circle-1"><i class="fa fa-google" aria-hidden="true"></i></div>
+                  <div class="circle-1"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                  <div class="circle-1"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                  <div class="circle-1"><i class="fa fa-dribbble" aria-hidden="true"></i></div>
+                  
+            </div>
+            <div>
+                <h2>ABOUT FREELANCER</h2>
+                <p>Freelance is a free to use, open source<br/>
+                Bootstrap theme created by <span class="span-1">Start <br/>Bootstrap</span></p>
+            </div>
+          </div>
+         
+    </footer>
+    <div class="foot-end">
+       <p>copyright &copy; Your Website 2019</p>
+    </div>
+
+    
+</body>
+<script>
+    function showMenu() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+</html>
